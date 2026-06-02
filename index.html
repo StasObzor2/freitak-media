@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Freytak Media | Новокубанское — обзор коньяка</title>
+    <title>Freytak Media | Новокубанское — экспертные обзоры коньяка</title>
+    <meta name="description" content="Freytak Media: честные обзоры коньяка Новокубанское, слепые дегустации, интервью с технологами. Адвокатский подход к оценке крепкого алкоголя.">
     <style>
         * {
             margin: 0;
@@ -12,219 +13,254 @@
         }
 
         body {
-            background: #e9ddcf;  /* благородный бежевый фон сайта Новокубанское */
+            background: #e0cfbc;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
-        /* компактный баннер в стилистике бренда */
-        .banner {
-            max-width: 800px;
+        /* единый баннер-статья в стиле Новокубанское */
+        .article-banner {
+            max-width: 980px;
             width: 100%;
-            background: linear-gradient(135deg, #fff5ea 0%, #fef1e2 100%);
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.7);
+            background: #fffaf3;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
             overflow: hidden;
-            transition: transform 0.2s ease;
-            border: 1px solid #e9cfb0;
+            border: 1px solid #e8d5bc;
         }
 
-        .banner-inner {
-            padding: 28px 30px 24px 30px;
+        .article-inner {
+            padding: 48px 52px;
         }
 
-        /* верхняя линия с эмблемой */
-        .banner-head {
+        /* шапка */
+        .brand-head {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e0c8aa;
-            padding-bottom: 14px;
+            gap: 16px;
+            border-bottom: 2px solid #eedfc8;
+            padding-bottom: 20px;
+            margin-bottom: 28px;
         }
-        .brand {
+        .brand-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
         .brand-icon {
-            font-size: 2rem;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+            font-size: 2.4rem;
+            filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.1));
         }
         .brand-name {
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: -0.3px;
-            color: #2b2a1c;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #2b291c;
         }
         .brand-name span {
-            color: #b47c44;
-            font-weight: 800;
+            color: #b47a41;
         }
-        .badge-expert {
-            background: #d9b58233;
-            backdrop-filter: blur(2px);
-            padding: 5px 12px;
-            border-radius: 60px;
-            font-size: 0.7rem;
+        .expert-tag {
+            background: #e9d8c2;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
             font-weight: 600;
-            color: #9b6a38;
-            border: 0.5px solid #e1bf91;
+            color: #8b623b;
         }
 
-        /* основная сетка: аватар + текст */
-        .banner-body {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 20px;
+        /* заголовок */
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #2b2a1e;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
         }
-        .avatar-col {
+        h1 a {
+            color: #b87a3a;
+            text-decoration: none;
+        }
+        h1 a:hover {
+            text-decoration: underline;
+        }
+        .lead {
+            font-size: 1rem;
+            color: #5c523b;
+            margin-bottom: 32px;
+            border-left: 3px solid #dfbc8c;
+            padding-left: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        /* сетка: аватар + основной текст */
+        .author-section {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .avatar-box {
             flex-shrink: 0;
             text-align: center;
         }
-        .avatar {
-            background: #dfcfb6;
+        .avatar-circle {
+            background: #ede0cf;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.7rem;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-            border: 2px solid #fff3e4;
+            font-size: 3rem;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border: 2px solid #fff0e2;
         }
-        .avatar-text {
-            font-size: 0.65rem;
+        .avatar-caption {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #a07d50;
             margin-top: 8px;
-            color: #846e48;
-            font-weight: 500;
         }
-        .desc-col {
+        .bio-text {
             flex: 1;
         }
-        .desc-col h3 {
-            font-size: 1.45rem;
-            font-weight: 700;
-            color: #2c2b1f;
-            margin-bottom: 8px;
-        }
-        .desc-col h3 a {
-            text-decoration: none;
-            color: #b87a3a;
-            transition: color 0.2s;
-        }
-        .desc-col h3 a:hover {
-            color: #905f2e;
-            text-decoration: underline;
-        }
-        .review-text {
-            font-size: 0.9rem;
-            line-height: 1.45;
-            color: #504631;
-            margin: 12px 0 14px 0;
-        }
-        .stats {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            font-size: 0.75rem;
-            color: #745e3b;
-            margin-bottom: 12px;
-        }
-        .stats span {
-            font-weight: 700;
-            color: #ad7942;
+        .bio-text p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3c3726;
+            font-size: 0.95rem;
         }
 
-        /* ссылки на площадки */
-        .links {
+        /* стили для основного текста статьи (полный объём) */
+        .full-article {
+            margin-top: 8px;
+        }
+        .full-article h2 {
+            font-size: 1.55rem;
+            margin: 28px 0 14px 0;
+            color: #2f2b1c;
+            font-weight: 600;
+            border-left: 4px solid #c1925c;
+            padding-left: 16px;
+        }
+        .full-article h3 {
+            font-size: 1.25rem;
+            margin: 22px 0 12px 0;
+            color: #9b6a3a;
+            font-weight: 600;
+        }
+        .full-article p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3f3a28;
+            font-size: 0.96rem;
+        }
+        .full-article ul, .full-article ol {
+            margin: 12px 0 20px 30px;
+            color: #3f3a28;
+        }
+        .full-article li {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        .full-article a {
+            color: #b87a3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #eedbbd;
+        }
+        .full-article a:hover {
+            border-bottom-color: #b87a3a;
+        }
+
+        /* блок с коньяками от эксперта */
+        .expert-cognacs {
+            background: #f6ede1;
+            border-radius: 28px;
+            padding: 22px 28px;
+            margin: 32px 0 28px;
+            border: 1px solid #ebd8be;
+        }
+        .expert-cognacs p {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: #b47a41;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .cognac-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 18px 0 12px;
+            gap: 18px;
         }
-        .link-btn {
-            background: #e8ddcd;
-            padding: 6px 14px;
-            border-radius: 40px;
-            font-size: 0.75rem;
+        .cognac-links a {
+            background: #ffffffdb;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5a3f22;
+            text-decoration: none;
+            border: 1px solid #e2cdad;
+            transition: all 0.2s;
+        }
+        .cognac-links a:hover {
+            background: #fff3e6;
+            border-color: #c19560;
+            color: #7b4f24;
+            transform: translateY(-1px);
+        }
+
+        /* платформы блогера */
+        .platform-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 28px 0 20px;
+        }
+        .platform-link {
+            background: #e9ddcd;
+            padding: 8px 20px;
+            border-radius: 44px;
+            font-size: 0.8rem;
             font-weight: 500;
             text-decoration: none;
-            color: #4d3d26;
+            color: #554529;
             transition: 0.2s;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            border: 0.5px solid #dac29e;
+            gap: 8px;
+            border: 0.5px solid #ddc9ab;
         }
-        .link-btn:hover {
+        .platform-link:hover {
             background: #dbcbaa;
             color: #2c2416;
             border-color: #b68654;
         }
 
-        /* список коньяков, которые оценил эксперт */
-        .cognac-list {
-            background: #fff7ef;
-            border-radius: 20px;
-            padding: 14px 18px;
-            margin-top: 16px;
-            border: 1px solid #ecdbba;
-        }
-        .cognac-list p {
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ad7b48;
-            margin-bottom: 12px;
-        }
-        .items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .cognac-item {
-            background: #ffffffd9;
-            border-radius: 48px;
-            padding: 5px 16px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #5a432b;
-            text-decoration: none;
-            transition: 0.2s;
-            border: 1px solid #eedfc9;
-        }
-        .cognac-item:hover {
-            background: #f5e9db;
-            border-color: #c19560;
-            color: #784f22;
-            transform: translateY(-1px);
-        }
-
+        /* подвал */
         .footer-note {
-            margin-top: 18px;
-            font-size: 0.7rem;
-            text-align: center;
-            color: #af8e60;
-            border-top: 1px solid #e8d5bd;
-            padding-top: 16px;
+            margin-top: 38px;
+            padding-top: 22px;
+            border-top: 1px solid #eedfc8;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
+            font-size: 0.7rem;
+            color: #ab8a5e;
         }
         .footer-note a {
-            color: #9b6b3a;
+            color: #946e41;
             text-decoration: none;
             font-weight: 500;
         }
@@ -232,84 +268,114 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 550px) {
-            .banner-inner {
-                padding: 20px;
+        @media (max-width: 720px) {
+            .article-inner {
+                padding: 28px 22px;
             }
-            .desc-col h3 {
-                font-size: 1.2rem;
+            h1 {
+                font-size: 1.7rem;
             }
-            .avatar {
-                width: 64px;
-                height: 64px;
-                font-size: 2rem;
+            .avatar-circle {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
             }
         }
     </style>
 </head>
 <body>
-
-<div class="banner">
-    <div class="banner-inner">
-        <!-- шапка -->
-        <div class="banner-head">
-            <div class="brand">
-                <span class="brand-icon">🍇</span>
-                <div class="brand-name">
-                    Новокубанское · <span>Freytak Media</span>
-                </div>
+<div class="article-banner">
+    <div class="article-inner">
+        <!-- шапка бренда -->
+        <div class="brand-head">
+            <div class="brand-logo">
+                <span class="brand-icon">🍇🥃</span>
+                <div class="brand-name">Новокубанское · <span>Freytak Media</span></div>
             </div>
-            <div class="badge-expert">⭐ эксперт коньячного рынка</div>
+            <div class="expert-tag">эксперт крепкого алкоголя</div>
         </div>
 
-        <!-- тело: фото / ник / информация -->
-        <div class="banner-body">
-            <div class="avatar-col">
-                <div class="avatar">⚖️🥃</div>
-                <div class="avatar-text">Николай Фрейтак</div>
+        <!-- заголовок статьи -->
+        <h1><a href="https://www.youtube.com/@FreytakMedia" target="_blank" rel="noopener noreferrer">Freytak Media</a> – эксперт, блоги и обзоры коньяка</h1>
+        <div class="lead">Профессиональный адвокат, который дегустирует как юрист: факты, аргументы и полная независимость.</div>
+
+        <!-- автор + вводный текст -->
+        <div class="author-section">
+            <div class="avatar-box">
+                <div class="avatar-circle">⚖️🥃</div>
+                <div class="avatar-caption">Николай Фрейтак</div>
             </div>
-            <div class="desc-col">
-                <h3>
-                    <a href="https://www.youtube.com/@FreytakMedia" target="_blank" rel="noopener noreferrer">Freytak Media</a>
-                </h3>
-                <div class="review-text">
-                    Адвокат, финансист и автор независимого блога о крепком алкоголе.  
-                    Более <strong>272 000</strong> подписчиков доверяют слепым дегустациям, честным обзорам и сравнению французских, российских брендов.  
-                    В фокусе — <strong>коньяки «Новокубанское»</strong>, интервью с технологами и разбор выдержек.
-                </div>
-                <div class="stats">
-                    <span>📺 YouTube · 272K+</span>
-                    <span>📱 VK Видео · Dzen</span>
-                    <span>🎙 обзоры 120+</span>
-                </div>
-                <!-- активные ссылки на площадки -->
-                <div class="links">
-                    <a href="https://www.youtube.com/@FreytakMedia" target="_blank" rel="noopener noreferrer" class="link-btn">🎬 YouTube канал</a>
-                    <a href="https://vk.com/freytakmedia" target="_blank" rel="noopener noreferrer" class="link-btn">📘 ВКонтакте</a>
-                    <a href="https://dzen.ru/freytakmedia" target="_blank" rel="noopener noreferrer" class="link-btn">📰 Дзен</a>
-                    <a href="https://rutube.ru/u/freytakmedia/" target="_blank" rel="noopener noreferrer" class="link-btn">🎥 Rutube</a>
-                </div>
+            <div class="bio-text">
+                <p>Freytak Media – это уникальный пример того, как профессиональный адвокат превратил свое увлечение в авторитетный источник знаний о крепком алкоголе. На его канале вы не найдете поверхностных «распаковок»: здесь каждый выпуск – это серьезный разговор с опорой на факты, историю и личный дегустационный опыт.</p>
+                <p>Блогер последовательно исследует российский рынок коньяка, сравнивая продукцию ведущих домов с мировыми образцами.</p>
             </div>
         </div>
 
-        <!-- коньяки, получившие высокую оценку эксперта -->
-        <div class="cognac-list">
-            <p>🥃 КОНЬЯКИ, КОТОРЫЕ ОЦЕНИЛ FREYTAK MEDIA</p>
-            <div class="items">
-                <a href="https://novokubanskoe.ru/catalog/konyak-ordinary/kuban-5-years/" target="_blank" rel="noopener noreferrer" class="cognac-item">«Кубань» 5 лет</a>
-                <a href="https://novokubanskoe.ru/catalog/konyak-kv/bolshoy-priz-6-years/" target="_blank" rel="noopener noreferrer" class="cognac-item">«Большой Приз» 6 лет (КВ)</a>
-                <a href="https://novokubanskoe.ru/catalog/konyak-ks/n-nekrasov-15-years/" target="_blank" rel="noopener noreferrer" class="cognac-item">«Н. Некрасов» 15 лет (КС)</a>
+        <!-- ПОЛНЫЙ ТЕКСТ СТАТЬИ (без изменений, без урезки) -->
+        <div class="full-article">
+            <h2>О блогере Freytak Media</h2>
+            <p>Николай Константинович Фрейтак – это не просто блогер, а настоящий взрослый и серьезный человек, сумевший соединить карьеру успешного адвоката с глубоким увлечением миром алкоголя и сигар. По образованию он юрист (МГЮА) и финансист (Финансовая академия при Правительстве РФ), что привило ему привычку полагаться исключительно на факты и собственный опыт. Именно этот профессиональный подход к сфере гедонизма сделал блог Фрейтак Медиа авторитетным среди ценителей. В его биографии есть интересная деталь: в юности он всерьез увлекался литературой и даже побеждал в конкурсах по творчеству Пушкина, что сформировало его умение красиво и грамотно доносить мысли. Сейчас на YouTube-канале Freytak Media более 272 тысяч подписчиков. Это делает его одним из самых популярных и авторитетных экспертов в сфере.</p>
+
+            <h2>Стиль подачи и формат контента</h2>
+            <p>Контент проекта ориентирован на аудиторию, которая ищет не просто оценку «вкусно/невкусно», а хочет узнать историю напитка и технологию производства. Автору удается сохранять баланс между глубоким анализом и доступностью изложения.</p>
+            <p>Ключевые особенности обзоров:<br>
+            ● с точки зрения профессионального юриста, блогер подходит к дегустации без эмоциональной рекламы, а с холодным расчетом и аргументацией;<br>
+            ● в видео часто участвуют приглашенные эксперты, гости и технологи производства, что делает разговор о напитке объемным.</p>
+            <p>Николай не боится задавать неудобные вопросы (например, о подлинности выдержки или происхождении спиртов), что выделяет его на фоне многих любительских каналов.</p>
+
+            <h2>Площадки и каналы блогера</h2>
+            <p>Основная аудитория сконцентрирована на YouTube, где выходят полноценные выпуски. Активность в социальных сетях также позволяет следить за обновлениями:<br>
+            ● платформа YouTube: здесь публикуются главные дегустации и обзоры;<br>
+            ● ВКонтакте (ВК): анонсы и короткие посты на платформе VK Видео;<br>
+            ● Дзен: текстовые версии обзоров и нарезки;<br>
+            ● Rutube (Рутуб): альтернативная площадка для размещения контента.</p>
+
+            <h2>Обзоры коньяков Новокубанское</h2>
+            <p>В фокусе внимания эксперта оказывались и коньяки Коньячного дома Новокубанское. Они упоминаются как минимум в двух объемных выпусках длительностью более часа каждый, в том числе с участием Николая Фокина – гендиректора ЗАО «Новокубанское». Посмотреть эти выпуски особенно полезно тем, кто ищет достойную альтернативу западным брендам. Русский коньяк в подаче эксперта предстает как хороший, актуальный и технологически сложный продукт.</p>
+
+            <h2>Популярные видео и обзоры</h2>
+            <p>Рейтинг популярности роликов строится не на хайпе, а на информационной ценности видео. В числе популярных роликов есть те, которые раскрывают следующие темы:<br>
+            1. Сравнение французских и российских коньяков ТОП-сегмента.<br>
+            2. Дегустация коньяков особой выдержки с участием технолога производства.<br>
+            3. Интервью с представителями коньячного дома о тонкостях купажирования.</p>
+            <p>На YouTube-канале эксперта есть несколько плейлистов, посвященных обзорам виски, вина, портвейна, коньяка. Самый объемный – «ВИСКИ КЛУБ», в котором уже более 120 видеороликов.</p>
+
+            <h2>Коньяк, который оценил эксперт</h2>
+            <p>После просмотра обзоров блогера возникает закономерное желание сравнить ощущения. Коньячный дом «Новокубанское» подготовил подборку коньяков, получивших высокую оценку блогера Николая Фрейтака. Это напитки, обладающие богатым букетом и сложной органолептикой, которую так ценит маститый дегустатор:<br>
+            ● «Кубань» 5 лет – ординарный коньяк с выдержкой 5 лет, в аромате которого преобладают сухофрукты и чернослив, а во вкусе чувствуется дубовая танинность и терпкость;<br>
+            ● «Большой Приз» 6 лет – коньяк класса КВ с мощным ароматом, где после ноты чистого дуба раскрываются оттенки влажных сухофруктов, душистого перца, корицы и шоколада;<br>
+            ● «Н. Некрасов» 15 лет – коньяк класса КС, чей аромат ассоциируется с новогодней елкой, хвоей и осыпающимися иголками, а затем переходит в сухофруктовый букет с черносливом и курагой.</p>
+            <p>Каталог коньяков доступен на официальном сайте. Канал Freytak Media провел слепые дегустации десятков напитков — эксперт поделился честными впечатлениями о каждом. Используйте эти обзоры как ориентир, но окончательное решение оставьте за своим вкусом.</p>
+
+            <h2>Заключение</h2>
+            <p>Независимо от того, интересуетесь ли вы миром крепкого алкоголя или просто ищете качественный подарок, материалы Фрейтак Медиа станут надежным путеводителем. Коньячный дом Новокубанское приглашает вас оценить продукцию лично. Уютный вечер в компании хорошего коньяка и сигара отлично дополнят интеллектуальный досуг, даже если вы не планируете снимать собственное интервью или пост для блога, или не смотрите популярных блогеров на эту тему. Пробуйте и составляйте собственное мнение о лучших образцах российского коньяка.</p>
+        </div>
+
+        <!-- блок ссылок на конкретные коньяки (кликабельно) -->
+        <div class="expert-cognacs">
+            <p>🍇 КОНЬЯКИ, ПОЛУЧИВШИЕ ВЫСОКУЮ ОЦЕНКУ FREYTAK MEDIA</p>
+            <div class="cognac-links">
+                <a href="https://novokubanskoe.ru/catalog/konyak-ordinary/kuban-5-years/" target="_blank" rel="noopener noreferrer">«Кубань» 5 лет</a>
+                <a href="https://novokubanskoe.ru/catalog/konyak-kv/bolshoy-priz-6-years/" target="_blank" rel="noopener noreferrer">«Большой Приз» 6 лет (КВ)</a>
+                <a href="https://novokubanskoe.ru/catalog/konyak-ks/n-nekrasov-15-years/" target="_blank" rel="noopener noreferrer">«Н. Некрасов» 15 лет (КС)</a>
             </div>
         </div>
 
-        <!-- подвал баннера – дополнительный CTA + ссылка на каталог -->
+        <!-- ссылки на площадки блогера (кликабельны) -->
+        <div class="platform-links">
+            <a href="https://www.youtube.com/@FreytakMedia" target="_blank" rel="noopener noreferrer" class="platform-link">🎬 YouTube (272K+)</a>
+            <a href="https://vk.com/freytakmedia" target="_blank" rel="noopener noreferrer" class="platform-link">📘 ВКонтакте</a>
+            <a href="https://dzen.ru/freytakmedia" target="_blank" rel="noopener noreferrer" class="platform-link">📰 Дзен</a>
+            <a href="https://rutube.ru/u/freytakmedia/" target="_blank" rel="noopener noreferrer" class="platform-link">🎥 Rutube</a>
+        </div>
+
+        <!-- подвал баннера -->
         <div class="footer-note">
-            <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия</span>
-            <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Смотреть весь каталог →</a>
-            <a href="https://www.youtube.com/watch?v=lnzBXdY3M2U&list=PLK6Gqo_bK_4cUqGeF3ROvF1IRgW_MYjQ" target="_blank" rel="noopener noreferrer">🎬 Обзоры Freytak Media</a>
+            <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия (с 1937 года)</span>
+            <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Весь каталог коньяков →</a>
+            <a href="https://www.youtube.com/watch?v=lnzBXdY3M2U&list=PLK6Gqo_bK_4cUqGeF3ROvF1IRgW_MYjQ" target="_blank" rel="noopener noreferrer">🎥 Смотреть обзоры Freytak Media</a>
         </div>
     </div>
 </div>
-
 </body>
 </html>
