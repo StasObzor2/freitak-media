@@ -220,44 +220,22 @@
             transform: translateY(-1px);
         }
 
-        /* платформы блогера */
-        .platform-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin: 28px 0 20px;
-        }
-        .platform-link {
-            background: #e9ddcd;
-            padding: 8px 20px;
-            border-radius: 44px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-decoration: none;
-            color: #554529;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 0.5px solid #ddc9ab;
-        }
-        .platform-link:hover {
-            background: #dbcbaa;
-            color: #2c2416;
-            border-color: #b68654;
-        }
-
-        /* подвал */
+        /* нижняя сноска (перенесена сразу после обзоров Новокубанское) */
         .footer-note {
-            margin-top: 38px;
-            padding-top: 22px;
+            margin-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid #eedfc8;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #ab8a5e;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .footer-note span {
+            font-weight: 400;
         }
         .footer-note a {
             color: #946e41;
@@ -311,7 +289,7 @@
             </div>
         </div>
 
-        <!-- ПОЛНЫЙ ТЕКСТ СТАТЬИ (без изменений, без урезки) -->
+        <!-- ПОЛНЫЙ ТЕКСТ СТАТЬИ (без изменений) -->
         <div class="full-article">
             <h2>О блогере Freytak Media</h2>
             <p>Николай Константинович Фрейтак – это не просто блогер, а настоящий взрослый и серьезный человек, сумевший соединить карьеру успешного адвоката с глубоким увлечением миром алкоголя и сигар. По образованию он юрист (МГЮА) и финансист (Финансовая академия при Правительстве РФ), что привило ему привычку полагаться исключительно на факты и собственный опыт. Именно этот профессиональный подход к сфере гедонизма сделал блог Фрейтак Медиа авторитетным среди ценителей. В его биографии есть интересная деталь: в юности он всерьез увлекался литературой и даже побеждал в конкурсах по творчеству Пушкина, что сформировало его умение красиво и грамотно доносить мысли. Сейчас на YouTube-канале Freytak Media более 272 тысяч подписчиков. Это делает его одним из самых популярных и авторитетных экспертов в сфере.</p>
@@ -332,6 +310,13 @@
 
             <h2>Обзоры коньяков Новокубанское</h2>
             <p>В фокусе внимания эксперта оказывались и коньяки Коньячного дома Новокубанское. Они упоминаются как минимум в двух объемных выпусках длительностью более часа каждый, в том числе с участием Николая Фокина – гендиректора ЗАО «Новокубанское». Посмотреть эти выпуски особенно полезно тем, кто ищет достойную альтернативу западным брендам. Русский коньяк в подаче эксперта предстает как хороший, актуальный и технологически сложный продукт.</p>
+
+            <!-- нижняя сноска (перенесена сразу после абзаца про обзоры коньяков Новокубанское) -->
+            <div class="footer-note">
+                <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия (с 1937 года)</span>
+                <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Весь каталог коньяков →</a>
+                <a href="https://www.youtube.com/watch?v=lnzBXdY3M2U&list=PLK6Gqo_bK_4cUqGeF3ROvF1IRgW_MYjQ" target="_blank" rel="noopener noreferrer">🎥 Смотреть обзоры Freytak Media</a>
+            </div>
 
             <h2>Популярные видео и обзоры</h2>
             <p>Рейтинг популярности роликов строится не на хайпе, а на информационной ценности видео. В числе популярных роликов есть те, которые раскрывают следующие темы:<br>
@@ -359,21 +344,6 @@
                 <a href="https://novokubanskoe.ru/catalog/konyak-kv/bolshoy-priz-6-years/" target="_blank" rel="noopener noreferrer">«Большой Приз» 6 лет (КВ)</a>
                 <a href="https://novokubanskoe.ru/catalog/konyak-ks/n-nekrasov-15-years/" target="_blank" rel="noopener noreferrer">«Н. Некрасов» 15 лет (КС)</a>
             </div>
-        </div>
-
-        <!-- ссылки на площадки блогера (кликабельны) -->
-        <div class="platform-links">
-            <a href="https://www.youtube.com/@FreytakMedia" target="_blank" rel="noopener noreferrer" class="platform-link">🎬 YouTube (272K+)</a>
-            <a href="https://vk.com/freytakmedia" target="_blank" rel="noopener noreferrer" class="platform-link">📘 ВКонтакте</a>
-            <a href="https://dzen.ru/freytakmedia" target="_blank" rel="noopener noreferrer" class="platform-link">📰 Дзен</a>
-            <a href="https://rutube.ru/u/freytakmedia/" target="_blank" rel="noopener noreferrer" class="platform-link">🎥 Rutube</a>
-        </div>
-
-        <!-- подвал баннера -->
-        <div class="footer-note">
-            <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия (с 1937 года)</span>
-            <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Весь каталог коньяков →</a>
-            <a href="https://www.youtube.com/watch?v=lnzBXdY3M2U&list=PLK6Gqo_bK_4cUqGeF3ROvF1IRgW_MYjQ" target="_blank" rel="noopener noreferrer">🎥 Смотреть обзоры Freytak Media</a>
         </div>
     </div>
 </div>
